@@ -22,7 +22,7 @@ public class Serie {
     private Categoria genero;
     private String actores;
     private String sinopsis;
-    @OneToMany(mappedBy = "serie")
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
     private List<Episodio> episodios;
 
     public Serie() {}
@@ -111,5 +111,9 @@ public class Serie {
 
     public void setSinopsis(String sinopsis) {
         this.sinopsis = sinopsis;
+    }
+
+    public void setEpisodios(List<Episodio> episodios) {
+        this.episodios = episodios;
     }
 }
