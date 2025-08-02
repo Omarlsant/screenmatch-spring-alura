@@ -12,6 +12,7 @@ public class Serie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
+
     @Column(unique = true)
     private String titulo;
     private Integer totalTemporadas;
@@ -21,7 +22,7 @@ public class Serie {
     private Categoria genero;
     private String actores;
     private String sinopsis;
-    @Transient
+    @OneToMany(mappedBy = "serie")
     private List<Episodio> episodios;
 
     public Serie() {}
