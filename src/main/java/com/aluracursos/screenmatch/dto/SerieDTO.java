@@ -10,4 +10,6 @@ public record SerieDTO(Long id,
                        String actores,
                        String poster,
                        String sinopsis) {
+    public SerieDTO(Long id, String titulo, Integer totalTemporadas, Double evaluacion, String poster, Categoria genero, String actores, String sinopsis) {
+    }
 }
