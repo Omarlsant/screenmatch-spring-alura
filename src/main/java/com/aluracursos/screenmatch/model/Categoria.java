@@ -32,4 +32,7 @@ public enum Categoria {
         }
         throw new IllegalArgumentException("Ninguna categoria encontrada: " + text);
     }
+
+    public static Categoria fromEspanol(String nombreGenero) {
+    }
 }
